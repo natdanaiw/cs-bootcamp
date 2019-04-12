@@ -16,7 +16,7 @@ flow:
         required: false
     - api_method: POST
   workflow:
-    - get_token_1:
+    - get_token:
         do:
           Integrations.demo.util.get_token: []
         publish:
@@ -47,9 +47,6 @@ flow:
 extensions:
   graph:
     steps:
-      get_token_1:
-        x: 109
-        y: 159
       http_client_action:
         x: 311
         y: 161
@@ -57,6 +54,9 @@ extensions:
           42575f99-5e20-53dd-a2fc-b02a8a65fcbc:
             targetId: 4eea6961-b2f8-eb11-ab9e-a3c04f8f70b4
             port: SUCCESS
+      get_token:
+        x: 109
+        y: 159
     results:
       SUCCESS:
         4eea6961-b2f8-eb11-ab9e-a3c04f8f70b4:
